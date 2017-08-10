@@ -1,0 +1,63 @@
+// General
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 600;
+}
+
+p {
+	font-weight: 400;
+	line-height: 9px;
+	color: grey;
+	font-size: 14px;
+}
+
+h3 {
+	margin: 1px;
+}
+
+.container {
+	padding: 2em 3em;
+}
+//Fonts
+
+//User Cards
+
+.user {
+	min-width: 379px;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	padding: 2em .3em 2em 1.3em;
+	height: 125px;
+	display: inline-block;
+	margin: 10px 1%;
+
+}
+.avatar {
+	border-radius: 100%;
+	display: block;
+	float: left;
+	margin-right: 1.5em;
+
+}
+
+.user-info {
+	&.snippet {
+		display: block;
+		display: block;
+		float: right;
+		margin-top: 22px;
+		width: 59%;
+		text-align: left;
+
+		> .phone,
+		> .address {
+			display: none;
+		}
+	}
+}
