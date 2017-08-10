@@ -1,8 +1,22 @@
 // General
 * {
 	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
 }
 
+body {
+	background-color: rgb(251, 251, 251);
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+//Fonts
 h1,
 h2,
 h3,
@@ -10,40 +24,49 @@ h4 {
 	font-weight: 600;
 }
 
+h1 {
+	flex-basis: 90%;
+	text-transform: uppercase;
+}
+
 p {
 	font-weight: 400;
-	line-height: 9px;
+	line-height: 10px;
 	color: grey;
 	font-size: 14px;
 }
 
 h3 {
-	margin: 1px;
+	margin: 2px;
+	font-size: 20px;
 }
 
-.container {
-	padding: 2em 3em;
-}
-//Fonts
+
 
 //User Cards
 
 .user {
-	min-width: 379px;
 	border: 2px solid lightgrey;
 	border-radius: 10px;
-	padding: 2em .3em 2em 1.3em;
-	height: 125px;
-	display: inline-block;
-	margin: 10px 1%;
-
+	height: 182px;
+	width: 406px;
+	min-width: 396px;
+	margin: 1em;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
+
 .avatar {
 	border-radius: 100%;
 	display: block;
 	float: left;
 	margin-right: 1.5em;
-
+	height: 123px;
+	margin-left: 1.5em;
 }
 
 .user-info {
@@ -51,10 +74,9 @@ h3 {
 		display: block;
 		display: block;
 		float: right;
-		margin-top: 22px;
 		width: 59%;
 		text-align: left;
-
+		background-color: #fff;
 		> .phone,
 		> .address {
 			display: none;
