@@ -62,7 +62,8 @@ h3 {
   text-align: left;
   background-color: #fff; }
   .user-info.snippet > .phone,
-  .user-info.snippet > .address {
+  .user-info.snippet > .address,
+  .user-info.snippet > .dob {
     display: none; }
 
 /*# sourceMappingURL=style.css.map */

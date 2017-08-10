@@ -16,7 +16,8 @@ function getPersonData(i) {
 		city: personResults.location.city,
 		phone: personResults.phone,
 		avatar: personResults.picture.large,
-		address: personResults.location.street + ', ' + personResults.location.postcode
+		address: personResults.location.street + ', ' + personResults.location.postcode,
+		dob: personResults.dob
 	}
 	return personData;
 }
@@ -31,12 +32,14 @@ function writeEachCard() {
 		const $addressHTML = $('> div > .address', $userCards[num]);
 		const $emailHTML = $('> div > .email', $userCards[num]);
 		const $nameHTML = $('> div > .name', $userCards[num]);
+		const $dobHTML = $('> div > .dob', $userCards[num]);
 
 		$avatarHTML.attr('src', getPersonData(num).avatar);
 		$phoneHTML.html(getPersonData(num).phone);
 		$cityHTML.html(getPersonData(num).city).css('textTransform', 'capitalize');
 		$addressHTML.html(getPersonData(num).address).css('textTransform', 'capitalize');
 		$emailHTML.html(getPersonData(num).email);
+		$dobHTML.html('Birthday: ' + getPersonData(num).dob);
 		$nameHTML.html(getPersonData(num).name).css('textTransform', 'capitalize');
 
 		$userCards.show();
