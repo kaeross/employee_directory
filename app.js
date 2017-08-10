@@ -1,6 +1,12 @@
 const $userCards = $('.user');
 let newPerson;
 
+$userCards.hide();
+
+/***********************************************************
+	Get Data from API and store relevent contact details
+***********************************************************/
+
 //function to get data and store in object
 function getPersonData(i) {
 	const personResults = newPerson.results[i];
@@ -15,25 +21,27 @@ function getPersonData(i) {
 	return personData;
 }
 
-//write contact to user card
-function writeUserCard(num){
-	const $avatarHTML = $('> .avatar', $userCards[num]);
-	const $phoneHTML = $('> div > .phone', $userCards[num]);
-	const $cityHTML = $('> div > .location', $userCards[num]);
-	const $addressHTML = $('> div > .address', $userCards[num]);
-	const $emailHTML = $('> div > .email', $userCards[num]);
-	const $nameHTML = $('> div > .name', $userCards[num]);
-
-	$avatarHTML.attr('src', getPersonData(num).avatar);
-	$phoneHTML.html(getPersonData(num).phone);
-	$cityHTML.html(getPersonData(num).city);
-	$addressHTML.html(getPersonData(num).address);
-	$emailHTML.html(getPersonData(num).email);
-	$nameHTML.html(getPersonData(num).name);
-};
-
 //writes each user to each card
 function writeEachCard() {
+	//write contact to user card
+	function writeUserCard(num){
+		const $avatarHTML = $('> .avatar', $userCards[num]);
+		const $phoneHTML = $('> div > .phone', $userCards[num]);
+		const $cityHTML = $('> div > .location', $userCards[num]);
+		const $addressHTML = $('> div > .address', $userCards[num]);
+		const $emailHTML = $('> div > .email', $userCards[num]);
+		const $nameHTML = $('> div > .name', $userCards[num]);
+
+		$avatarHTML.attr('src', getPersonData(num).avatar);
+		$phoneHTML.html(getPersonData(num).phone);
+		$cityHTML.html(getPersonData(num).city).css('textTransform', 'capitalize');
+		$addressHTML.html(getPersonData(num).address).css('textTransform', 'capitalize');
+		$emailHTML.html(getPersonData(num).email);
+		$nameHTML.html(getPersonData(num).name).css('textTransform', 'capitalize');
+
+		$userCards.show();
+	}
+
 	for (let i = 0; i < $userCards.length; i++) {
 		writeUserCard(i);
 	}
