@@ -45,6 +45,29 @@ h3 {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center; }
+  .user .user-info.snippet {
+    display: block;
+    display: block;
+    float: right;
+    width: 59%;
+    text-align: left;
+    background-color: #fff; }
+    .user .user-info.snippet > .phone,
+    .user .user-info.snippet > .address,
+    .user .user-info.snippet > .dob {
+      display: none; }
+
+.user-modal {
+  display: none; }
+  .user-modal .user-info.snippet {
+    display: block;
+    display: block;
+    text-align: left;
+    background-color: #fff; }
+    .user-modal .user-info.snippet > .phone,
+    .user-modal .user-info.snippet > .address,
+    .user-modal .user-info.snippet > .dob {
+      display: block; }
 
 .avatar {
   border-radius: 100%;
@@ -54,16 +77,8 @@ h3 {
   height: 123px;
   margin-left: 1.5em; }
 
-.user-info.snippet {
-  display: block;
-  display: block;
-  float: right;
-  width: 59%;
-  text-align: left;
-  background-color: #fff; }
-  .user-info.snippet > .phone,
-  .user-info.snippet > .address,
-  .user-info.snippet > .dob {
-    display: none; }
+.featherlight-content {
+  border: 2px solid lightgrey;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=style.css.map */

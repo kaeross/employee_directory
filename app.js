@@ -1,11 +1,12 @@
 const $userCards = $('.user');
+const $userModal = $('.user-modal');
 let newPerson;
 
 $userCards.hide();
 
 /***********************************************************
 	Get Data from API and store relevent contact details
-***********************************************************/
+	***********************************************************/
 
 //function to get data and store in object
 function getPersonData(i) {
@@ -45,8 +46,17 @@ function writeEachCard() {
 		$userCards.show();
 	}
 
+	//create modal window for user card
+	function createUserModal(num) {
+		//get inner HTML of Target
+		const $userModalHTML = $userCards.eq(num).html();
+		//set as HTML of $userModal
+		$userModal.eq(num).html($userModalHTML);
+	}
+
 	for (let i = 0; i < $userCards.length; i++) {
 		writeUserCard(i);
+		createUserModal(i);
 	}
 }
 
@@ -63,5 +73,12 @@ $.ajax({
 });
 
 /***********************************************************
-	Get Data from API and store relevent contact details
-***********************************************************/
+	Create user modal window
+	***********************************************************/
+
+
+	//get index of current modal 
+		//right click -> index + 1, left click -> index -1
+
+
+

@@ -1,3 +1,9 @@
+$bgColorLight: rgb(251, 251, 251);
+$bgCardColor: #fff;
+$cardBorder: 2px solid lightgrey;
+$cardBorderRadius: 10px;
+
+
 // General
 * {
 	font-family: 'Open Sans', sans-serif;
@@ -5,7 +11,7 @@
 }
 
 body {
-	background-color: rgb(251, 251, 251);
+	background-color: $bgColorLight;
 	margin: 0;
 }
 
@@ -46,18 +52,51 @@ h3 {
 //User Cards
 
 .user {
-	border: 2px solid lightgrey;
-	border-radius: 10px;
+	border: $cardBorder;
+	border-radius: $cardBorderRadius;
 	height: 182px;
 	width: 406px;
 	min-width: 396px;
 	margin: 1em;
-	background-color: #fff;
+	background-color: $bgCardColor;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+
+	.user-info {
+		&.snippet {
+			display: block;
+			display: block;
+			float: right;
+			width: 59%;
+			text-align: left;
+			background-color: #fff;
+			> .phone,
+			> .address,
+			> .dob {
+				display: none;
+			}
+		}
+	}
+}
+
+.user-modal {
+	display: none;
+	.user-info {
+		&.snippet {
+			display: block;
+			display: block;
+			text-align: left;
+			background-color: $bgCardColor;
+			> .phone,
+			> .address,
+			> .dob {
+				display: block;
+			}
+		}
+	}
 }
 
 .avatar {
@@ -69,18 +108,10 @@ h3 {
 	margin-left: 1.5em;
 }
 
-.user-info {
-	&.snippet {
-		display: block;
-		display: block;
-		float: right;
-		width: 59%;
-		text-align: left;
-		background-color: #fff;
-		> .phone,
-		> .address,
-		> .dob {
-			display: none;
-		}
-	}
+
+// Modal window
+.featherlight-content {
+	border: $cardBorder;
+	border-radius: $cardBorderRadius;
+
 }
