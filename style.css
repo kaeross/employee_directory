@@ -104,6 +104,11 @@ button {
       margin: 2em 1em;
       min-width: 300px; }
 
+.user-search {
+  float: right;
+  margin-right: 2em;
+  margin-top: 1em; }
+
 .featherlight-content {
   border: 2px solid lightgrey;
   border-radius: 10px;

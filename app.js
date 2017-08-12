@@ -87,7 +87,8 @@ function searchBox() {
 
 	return searchHTML;
 }
-$('.page-header').append(searchBox());
+
+$('.searchbox').append(searchBox());
 
 
 function notFound() {
@@ -111,7 +112,7 @@ function searchList() {
 	// Check if each user name contains search query
 	$userCards.each( function() {
 		var $nameHTML = $('> div > .name', this);
-		var $usernameHTML = $('> div > .name', this);
+		var $usernameHTML = $('> div > .username', this);
 		if( $nameHTML.text().toUpperCase().indexOf(searchInputVal) > -1 || $usernameHTML.text().toUpperCase().indexOf(searchInputVal) > -1 ) {
 			// add this user to list of “matched” student
 			matched.push(this);
