@@ -12,6 +12,10 @@ body {
   flex-wrap: wrap;
   justify-content: center; }
 
+.header {
+  padding: 0 3em;
+  justify-content: space-between; }
+
 .avatar {
   border-radius: 100%;
   display: block; }
@@ -24,7 +28,7 @@ h4 {
   color: darkslategrey; }
 
 h1 {
-  flex-basis: 90%;
+  flex-basis: 64%;
   text-transform: uppercase; }
 
 p {
@@ -108,6 +112,8 @@ button {
   float: right;
   margin-right: 2em;
   margin-top: 1em; }
+  .user-search > input {
+    font-size: 17px; }
 
 .featherlight-content {
   border: 2px solid lightgrey;

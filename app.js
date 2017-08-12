@@ -122,7 +122,7 @@ function searchList() {
 	// if not found display message
 	if (matched.length === 0) {
 		$userCards.hide();
-		$('.page-header').append(notFound);
+		$('.main-body').append(notFound);
 		const notFoundButton = $('.not-found-button');
 		notFoundButton.on('click', function() {
 			console.log('click click');
