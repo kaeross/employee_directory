@@ -18,7 +18,8 @@ function getPersonData(i) {
 		phone: personResults.phone,
 		avatar: personResults.picture.large,
 		address: personResults.location.street + ', ' + personResults.location.state + ' ' + personResults.location.postcode,
-		dob: personResults.dob
+		dob: personResults.dob,
+		user: personResults.login.username
 	}
 	return personData;
 }
@@ -33,6 +34,7 @@ function writeEachCard() {
 		const $addressHTML = $('> div > .address', $userCards[num]);
 		const $emailHTML = $('> div > .email', $userCards[num]);
 		const $nameHTML = $('> div > .name', $userCards[num]);
+		const $usernameHTML = $('> div > .username', $userCards[num]);
 		const $dobHTML = $('> div > .dob', $userCards[num]);
 
 		$avatarHTML.attr('src', getPersonData(num).avatar);
@@ -41,6 +43,7 @@ function writeEachCard() {
 		$addressHTML.html(getPersonData(num).address).css('textTransform', 'capitalize');
 		$emailHTML.html(getPersonData(num).email);
 		$dobHTML.html('Birthday: ' + getPersonData(num).dob);
+		$usernameHTML.html('User: ' + getPersonData(num).user);
 		$nameHTML.html(getPersonData(num).name).css('textTransform', 'capitalize');
 
 		$userCards.show();
@@ -108,7 +111,8 @@ function searchList() {
 	// Check if each user name contains search query
 	$userCards.each( function() {
 		var $nameHTML = $('> div > .name', this);
-		if( $nameHTML.text().toUpperCase().indexOf(searchInputVal) > -1 ) {
+		var $usernameHTML = $('> div > .name', this);
+		if( $nameHTML.text().toUpperCase().indexOf(searchInputVal) > -1 || $usernameHTML.text().toUpperCase().indexOf(searchInputVal) > -1 ) {
 			// add this user to list of “matched” student
 			matched.push(this);
 		} 

@@ -75,7 +75,7 @@ button {
 	border: $cardBorder;
 	border-radius: $cardBorderRadius;
 	height: 182px;
-	width: 406px;
+	// width: 406px;
 	min-width: 396px;
 	margin: 1em;
 	background-color: $bgCardColor;
@@ -100,6 +100,7 @@ button {
 			> .phone,
 			> .address,
 			> .dob,
+			> .username,
 			hr {
 				display: none;
 			}
@@ -128,6 +129,7 @@ button {
 			}
 			> .phone,
 			> .address,
+			> .username,
 			> .dob {
 				display: block;
 			}
