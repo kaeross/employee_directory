@@ -23,7 +23,6 @@ function getPersonData(i) {
 	return personData;
 }
 
-
 //writes each user to each card
 function writeEachCard() {
 	//write contact to user card
@@ -62,21 +61,15 @@ function writeEachCard() {
 	}
 }
 
-
-
 /***********************************************************
 	Flick between modal windows
 	***********************************************************/
-// create arrows to select left and right
+$('div.user').featherlightGallery({
+		previousIcon: '«',
+		nextIcon: '»',
+		galleryFadeIn: 300,
 
-	//get index of current modal 
-		//right click -> index + 1, left click -> index -1
-
-		//if 
-$userCards.on('click', function() {
-	//var 
-	currentUserIndex = $userCards.index(this);
-	console.log(currentUserIndex);
+		openSpeed: 300
 });
 
 /***********************************************************
@@ -146,7 +139,7 @@ function searchList() {
 	
 //Ajax request to get new contact data from random user generator api
 $.ajax({
-	url: 'https://randomuser.me/api/?results=12&nat=gb,us',
+	url: 'https://randomuser.me/api/?results=12&nat=gb,us,dk,fr,nz',
 	dataType: 'json',
 	//if successful store relevent data about user
 	success: function(data) {

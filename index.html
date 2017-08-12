@@ -6,16 +6,20 @@
 	<meta charset="utf-8">
 	<meta lang="en-gb">
 	<link rel="stylesheet" type="text/css" href="featherlight/featherlight.min.css">
+	<link rel="stylesheet" type="text/css" href="featherlight/featherlight.gallery.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"> 
 </head>
 <body>
 
-	<section>
+	<section 
+	data-featherlight-gallery
+	data-featherlight-filter="div"
+	>
 		<div class="container">
-			<h1 class='page-header'>Awesome Startup Employee Directory</h1>
+		<h1 class='page-header'>Awesome Startup Employee Directory</h1>
 
-			
+			<div class="user-modal" id="user-modal-0"></div>
 			<div class="user" data-featherlight="#user-modal-0">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -29,6 +33,7 @@
 				</div>
 			</div>
 
+			<div class="user-modal" id="user-modal-1"></div>
 			<div class="user" data-featherlight="#user-modal-1">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -42,6 +47,7 @@
 				</div>
 			</div>
 			
+			<div class="user-modal" id="user-modal-2"></div>
 			<div class="user" data-featherlight="#user-modal-2">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -54,7 +60,8 @@
 					<p class="dob"></p>
 				</div>
 			</div>
-			
+
+			<div class="user-modal" id="user-modal-3"></div>
 			<div class="user" data-featherlight="#user-modal-3">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -68,6 +75,7 @@
 				</div>
 			</div>
 
+						<div class="user-modal" id="user-modal-4"></div>
 			<div class="user" data-featherlight="#user-modal-4">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -80,7 +88,8 @@
 					<p class="dob"></p>
 				</div>
 			</div>
-			
+
+			<div class="user-modal" id="user-modal-5"></div>
 			<div class="user" data-featherlight="#user-modal-5">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -93,7 +102,8 @@
 					<p class="dob"></p>
 				</div>
 			</div>
-
+			
+			<div class="user-modal" id="user-modal-6"></div>
 			<div class="user" data-featherlight="#user-modal-6">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -107,7 +117,7 @@
 				</div>
 			</div>
 
-			
+			<div class="user-modal" id="user-modal-7"></div>
 			<div class="user" data-featherlight="#user-modal-7">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -121,7 +131,7 @@
 				</div>
 			</div>
 
-
+						<div class="user-modal" id="user-modal-8"></div>
 			<div class="user" data-featherlight="#user-modal-8">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -135,6 +145,7 @@
 				</div>
 			</div>
 
+			<div class="user-modal" id="user-modal-9"></div>
 			<div class="user" data-featherlight="#user-modal-9">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -147,7 +158,8 @@
 					<p class="dob"></p>
 				</div>
 			</div>
-
+			
+			<div class="user-modal" id="user-modal-10"></div>
 			<div class="user" data-featherlight="#user-modal-10">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -161,6 +173,7 @@
 				</div>
 			</div>
 
+			<div class="user-modal" id="user-modal-11"></div>
 			<div class="user" data-featherlight="#user-modal-11">
 				<img src="" class="avatar">
 				<div class="user-info snippet">
@@ -174,20 +187,6 @@
 				</div>
 			</div>
 
-			<section>
-			<div class="user-modal" id="user-modal-0"></div>
-			<div class="user-modal" id="user-modal-1"></div>
-			<div class="user-modal" id="user-modal-2"></div>
-			<div class="user-modal" id="user-modal-3"></div>
-			<div class="user-modal" id="user-modal-4"></div>
-			<div class="user-modal" id="user-modal-5"></div>
-			<div class="user-modal" id="user-modal-6"></div>
-			<div class="user-modal" id="user-modal-7"></div>
-			<div class="user-modal" id="user-modal-8"></div>
-			<div class="user-modal" id="user-modal-9"></div>
-			<div class="user-modal" id="user-modal-10"></div>
-			<div class="user-modal" id="user-modal-11"></div>
-			</section>
 			
 		</div>
 	</section>
@@ -199,6 +198,7 @@
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
 	<script type="text/javascript" src="featherlight/featherlight.min.js"></script>
+	<script type="text/javascript" src="featherlight/featherlight.gallery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
