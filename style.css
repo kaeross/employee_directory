@@ -12,11 +12,16 @@ body {
   flex-wrap: wrap;
   justify-content: center; }
 
+.avatar {
+  border-radius: 100%;
+  display: block; }
+
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 600; }
+  font-weight: 600;
+  color: darkslategrey; }
 
 h1 {
   flex-basis: 90%;
@@ -32,6 +37,18 @@ h3 {
   margin: 2px;
   font-size: 20px; }
 
+h4 {
+  text-transform: none; }
+
+button {
+  text-transform: capitalize;
+  padding: 1em;
+  font-size: 16px;
+  color: white;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 2px solid lightgrey; }
+
 .user {
   border: 2px solid lightgrey;
   border-radius: 10px;
@@ -45,8 +62,12 @@ h3 {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center; }
+  .user .avatar {
+    float: left;
+    margin-right: 1.5em;
+    height: 123px;
+    margin-left: 1.5em; }
   .user .user-info.snippet {
-    display: block;
     display: block;
     float: right;
     width: 59%;
@@ -54,31 +75,43 @@ h3 {
     background-color: #fff; }
     .user .user-info.snippet > .phone,
     .user .user-info.snippet > .address,
-    .user .user-info.snippet > .dob {
+    .user .user-info.snippet > .dob,
+    .user .user-info.snippet hr {
       display: none; }
 
 .user-modal {
   display: none; }
+  .user-modal .avatar {
+    height: 172px;
+    margin: 1em auto; }
   .user-modal .user-info.snippet {
     display: block;
-    display: block;
-    text-align: left;
-    background-color: #fff; }
+    text-align: center;
+    background-color: #fff;
+    line-height: 2em; }
+    .user-modal .user-info.snippet p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5em; }
     .user-modal .user-info.snippet > .phone,
     .user-modal .user-info.snippet > .address,
     .user-modal .user-info.snippet > .dob {
       display: block; }
-
-.avatar {
-  border-radius: 100%;
-  display: block;
-  float: left;
-  margin-right: 1.5em;
-  height: 123px;
-  margin-left: 1.5em; }
+    .user-modal .user-info.snippet hr {
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      margin: 2em 1em;
+      min-width: 300px; }
 
 .featherlight-content {
   border: 2px solid lightgrey;
-  border-radius: 10px; }
+  border-radius: 10px;
+  padding: 1.7em; }
+
+.featherlight .featherlight-close-icon {
+  font-size: 2em;
+  line-height: 30px;
+  width: 30px;
+  color: darkgray; }
 
 /*# sourceMappingURL=style.css.map */

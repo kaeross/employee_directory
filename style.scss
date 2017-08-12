@@ -2,6 +2,8 @@ $bgColorLight: rgb(251, 251, 251);
 $bgCardColor: #fff;
 $cardBorder: 2px solid lightgrey;
 $cardBorderRadius: 10px;
+$darkfont: darkslategrey;
+$lightfont: grey;
 
 
 // General
@@ -22,12 +24,18 @@ body {
 	justify-content: center;
 }
 
+.avatar {
+	border-radius: 100%;
+	display: block;
+}
+
 //Fonts
 h1,
 h2,
 h3,
 h4 {
 	font-weight: 600;
+	color: $darkfont;
 }
 
 h1 {
@@ -38,7 +46,7 @@ h1 {
 p {
 	font-weight: 400;
 	line-height: 10px;
-	color: grey;
+	color: $lightfont;
 	font-size: 14px;
 }
 
@@ -47,7 +55,19 @@ h3 {
 	font-size: 20px;
 }
 
+h4 {
+	text-transform: none;
+}
 
+button {
+	text-transform: capitalize;
+	padding: 1em;
+	font-size: 16px;
+	color: white;
+	background-color: lightblue;
+	border-radius: 10px;
+	border: $cardBorder;
+}
 
 //User Cards
 
@@ -64,54 +84,77 @@ h3 {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-
+	.avatar {
+		float: left;
+		margin-right: 1.5em;
+		height: 123px;
+		margin-left: 1.5em;
+	}
 	.user-info {
 		&.snippet {
-			display: block;
 			display: block;
 			float: right;
 			width: 59%;
 			text-align: left;
-			background-color: #fff;
+			background-color: $bgCardColor;
 			> .phone,
 			> .address,
-			> .dob {
+			> .dob,
+			hr {
 				display: none;
 			}
 		}
 	}
 }
 
+
+
 .user-modal {
 	display: none;
+	.avatar {
+		height: 172px;
+		margin: 1em auto;
+	}
 	.user-info {
 		&.snippet {
 			display: block;
-			display: block;
-			text-align: left;
+			text-align: center;
 			background-color: $bgCardColor;
+			line-height: 2em;
+			p {
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 1.5em;
+			}
 			> .phone,
 			> .address,
 			> .dob {
 				display: block;
 			}
+			hr {
+				border: none;
+				border-bottom: 1px solid lightgrey;
+				margin: 2em 1em;
+				min-width: 300px;
+
+			}
 		}
 	}
 }
 
-.avatar {
-	border-radius: 100%;
-	display: block;
-	float: left;
-	margin-right: 1.5em;
-	height: 123px;
-	margin-left: 1.5em;
-}
+
 
 
 // Modal window
 .featherlight-content {
 	border: $cardBorder;
 	border-radius: $cardBorderRadius;
+	padding: 1.7em;
+}
 
+.featherlight .featherlight-close-icon {
+	font-size: 2em;
+	line-height: 30px;
+	width: 30px;
+color: darkgray;
 }
