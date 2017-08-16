@@ -92,7 +92,11 @@ $('.searchbox').append(searchBox());
 
 
 function notFound() {
-	let notFoundText = '<div class="not-found"><h4>No users match your query... Please try again</h4><button class="not-found-button">See all users</button></div>';
+	let notFoundText = `
+	<div class="not-found">
+		<h4>No users match your query... Please try again</h4>
+		<button class="not-found-button">See all users</button>
+	</div>`;
 	return notFoundText;
 }
 
