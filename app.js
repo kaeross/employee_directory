@@ -1,6 +1,7 @@
+(function(){
+	'use strict';
 const $userCards = $('.user');
 const $userModal = $('.user-modal');
-var currentUserIndex;
 let newPerson;
 $userCards.hide();
 
@@ -20,7 +21,7 @@ function getPersonData(i) {
 		address: personResults.location.street + ', ' + personResults.location.state + ' ' + personResults.location.postcode,
 		dob: personResults.dob,
 		user: personResults.login.username
-	}
+	};
 	return personData;
 }
 
@@ -50,13 +51,10 @@ function writeEachCard() {
 	}
 	//create modal window for user card
 	function createUserModal(num) {
-		
-		const phone = $('> div > .phone', $userModal.eq(num));
 		//get inner HTML of Target
 		const $userModalHTML = $userCards.eq(num).html();
 		//set as HTML of $userModal
 		$userModal.eq(num).html($userModalHTML);
-		//add hr above phone
 	}
 	for (let i = 0; i < $userCards.length; i++) {
 		writeUserCard(i);
@@ -158,3 +156,4 @@ $.ajax({
 		$('.user-search > input').on('keyup keypress', searchList);			
 	}
 });
+})();
