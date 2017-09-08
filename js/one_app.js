@@ -77,25 +77,21 @@ $('div.user').featherlightGallery({
 ***********************************************************/
 
 //Append search input to header
-function searchBox() {
-	let searchHTML = '<div class="user-search">';
-	searchHTML += '<input placeholder="Search for users">';
-	searchHTML += '</div>';
-
-	return searchHTML;
-}
+const searchBox = () => {(
+	`<div class="user-search">
+		<input placeholder="Search for users">
+	</div>`
+)}
 
 $('.searchbox').append(searchBox());
 
 
-function notFound() {
-	let notFoundText = `
-	<div class="not-found">
+const notFound = () => {(
+	`<div class="not-found">
 		<h4>No users match your query... Please try again</h4>
 		<button class="not-found-button">See all users</button>
-	</div>`;
-	return notFoundText;
-}
+	</div>`
+)}
 
 //Add search function
 function searchList() {
@@ -131,7 +127,6 @@ function searchList() {
 			$('.not-found').remove();
 		});
 		$('.not-found').css({'margin': '2em', 'text-align': 'center', 'font-size': '1em','padding': '3em 0'});
-		searchInput.val('');
 	} else {
 		//show only matched users
 		$userCards.hide();
