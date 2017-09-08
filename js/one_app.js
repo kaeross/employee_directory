@@ -1,3 +1,6 @@
+const jQuery = require('jQuery');
+const featherlight = require('featherlight');
+
 (function(){'use strict';
 const $userCards = $('.user');
 const $userModal = $('.user-modal');

@@ -12,9 +12,9 @@ gulp.task('concatScripts', ()=>{
 });
 
 gulp.task("minifyScripts", () => {
-	gulp.src("js/one_app.js") 
+	gulp.src("app.js") 
 	.pipe(uglify())
-	.pipe(rename("one_app.min.js"))
+	.pipe(rename("app.min.js"))
 	.pipe(gulp.dest("./js/"))
 });
 
